@@ -5,12 +5,12 @@
 using namespace std;
 struct Node{
     int num,t,pre;
-    Node(int nn,int tt,int pp):num(nn),t(tt),pre(pp){}
+    Node(int nn,int tt,int pp):num(nn),t(tt),pre(pp){}//结构体定义
 };
 
 
-bool operator < (const Node &a,const Node&b){
-    if(a.pre!=b.pre) return a.pre>b.pre;
+bool operator < (const Node &a,const Node&b){//重载小于号 
+    if(a.pre!=b.pre) return a.pre>b.pre;//优先队列是降序排序 修改之
     else return a.num>b.num;
 }
 
